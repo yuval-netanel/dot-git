@@ -1,0 +1,27 @@
+[push]
+	default = tracking
+[user]
+	name = Yuval Netanel
+	email = yuval.netanel@klarna.com
+[core]
+	excludesfile = /Users/yuvalnetanel/.gitignore_global
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+  ui = true
+[alias]
+lc = log ORIG_HEAD.. --stat --no-merges
+undo=reset --hard
+st = status
+ci = commit
+br = branch
+co = checkout
+df = diff
+dc = diff --cached
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+who = shortlog -s --
